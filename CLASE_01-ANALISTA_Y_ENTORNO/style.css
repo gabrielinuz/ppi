@@ -18,6 +18,34 @@ body {
     overflow: hidden;
 }
 
+/* --- TIPOGRAFÍA Y ESPACIADO ESTRUCTURAL --- */
+
+/* Base para párrafos y listas */
+p, ul, ol {
+    line-height: 1.7; /* Mejora la legibilidad dentro del mismo bloque */
+    margin-bottom: 1.5rem; /* Reemplaza semánticamente al <br> */
+}
+
+/* Espaciado interno de los ítems de lista */
+li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Prevención de desbordamientos: 
+   Elimina el margen extra si el párrafo o lista es el último elemento de su contenedor */
+article p:last-child, 
+article ul:last-child, 
+article ol:last-child {
+    margin-bottom: 0;
+}
+
+/* Ajuste específico para el texto de las referencias académicas */
+.academic-ref p {
+    margin-bottom: 0; /* Mantiene la caja compacta */
+    font-size: 0.9rem;
+}
+
 .slide {
     width: 85%;
     max-width: 1100px;
@@ -58,3 +86,36 @@ button {
     transition: 0.3s;
 }
 button:hover { background: var(--accent); color: #000; }
+
+/* Botón Home para slides intermedias */
+.btn-home-top {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.btn-home-top:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Mantener el estilo del botón Home cuando está en el nav-controls */
+.btn-home {
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-right: 10px;
+}
