@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navContainer.className = 'nav-controls';
 
     const btnHome = document.createElement('a');
-    btnHome.textContent = '🏠 Inicio';
+    btnHome.textContent = 'Inicio';
     btnHome.href = '../index.html';
     
     if (currentId === 1 || currentId === totalSlides) {
